@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     boolean[] favorites;
 
     ImageButton imageButton;
+
+    FloatingActionButton floating;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
         listAdapter = new ListAdapter(MainActivity.this, dataArrayList);
         binding.listview.setAdapter(listAdapter);
-        binding.listview.getItemAtPosition(0);
 
 //        binding.listview
 //                .setClickable(true);
@@ -69,6 +70,15 @@ public class MainActivity extends AppCompatActivity {
                 favorites[i] = !favorites[i];
                 listAdapter.notifyDataSetChanged();
                 return true;
+            }
+        });
+
+        floating= (FloatingActionButton) findViewById(R.id.floating);
+        floating.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,FavActivity.class);
+                startActivity(intent);
             }
         });
     }

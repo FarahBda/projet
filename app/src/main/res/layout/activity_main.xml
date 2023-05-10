@@ -25,4 +25,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/list_item" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:src="@drawable/fav"
+        android:backgroundTint="@color/red" />
 </androidx.constraintlayout.widget.ConstraintLayout>

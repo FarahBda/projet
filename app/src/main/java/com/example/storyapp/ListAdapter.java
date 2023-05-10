@@ -11,13 +11,21 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
+import java.util.List;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class ListAdapter extends ArrayAdapter<ListData> {
+    public static ArrayList<ListData> favorites = new ArrayList<>();
     public ListAdapter(@NonNull Context context, ArrayList<ListData> dataArrayList) {
         super(context, R.layout.list_item, dataArrayList);
     }
+
+    public static ArrayList<ListData> getFavorites() {
+        return favorites;
+    }
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View view, @NonNull ViewGroup parent) {
@@ -61,9 +69,12 @@ public class ListAdapter extends ArrayAdapter<ListData> {
                 listData.setFavorite(!listData.isFavorite());
                 if (listData.isFavorite()) {
                     favoriteIcon.setImageResource(R.drawable.baseline_favorite_24);
+                    favorites.add(listData);
                 } else {
                     favoriteIcon.setImageResource(R.drawable.fav);
+                    favorites.remove(listData);
                 }
+                notifyDataSetChanged();
             }
         });
 
