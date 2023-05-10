@@ -6,11 +6,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.storyapp.databinding.ActivityMainBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -20,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<ListData> dataArrayList = new ArrayList<>();
     ListData listData;
     boolean[] favorites;
+
+    ImageButton imageButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,20 +42,27 @@ public class MainActivity extends AppCompatActivity {
             listData = new ListData(titleList[i], pageList[i], imageList[i]);
             dataArrayList.add(listData);
         }
+
+
         listAdapter = new ListAdapter(MainActivity.this, dataArrayList);
         binding.listview.setAdapter(listAdapter);
-        binding.listview.setClickable(true);
+        binding.listview.getItemAtPosition(0);
 
-        binding.listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(MainActivity.this, DetailedActivity.class);
-                intent.putExtra("name", titleList[i]);
-                intent.putExtra("time", pageList[i]);
-                intent.putExtra("image", imageList[i]);
-                startActivity(intent);
-            }
-        });
+//        binding.listview
+//                .setClickable(true);
+//
+//
+//        binding.listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Toast.makeText(MainActivity.this, "Test", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(MainActivity.this, DetailedActivity.class);
+//                intent.putExtra("name", titleList[i]);
+//                intent.putExtra("time", pageList[i]);
+//                intent.putExtra("image", imageList[i]);
+//                startActivity(intent);
+//            }
+//        });
         binding.listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {

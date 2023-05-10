@@ -1,9 +1,13 @@
 package com.example.storyapp;
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
@@ -21,13 +25,27 @@ public class ListAdapter extends ArrayAdapter<ListData> {
         if (view == null){
             view = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
+
         ImageView listImage = view.findViewById(R.id.listImage);
         TextView listTitle = view.findViewById(R.id.listTitle);
         TextView listPage = view.findViewById(R.id.listPage);
+
         final ImageView favoriteIcon = view.findViewById(R.id.button);
+
         listImage.setImageResource(listData.image);
         listTitle.setText(listData.title);
         listPage.setText(listData.page);
+
+        ImageButton imageButton = view.findViewById(R.id.nextButton);
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),DetailedActivity.class);
+                intent.putExtra("name",listData.title);
+                getContext().startActivity(intent);
+            }
+        });
 
         // Set favorite icon based on list data
         if (listData.isFavorite()) {

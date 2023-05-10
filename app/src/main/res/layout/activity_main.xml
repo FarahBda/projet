@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/fonnd">
+    android:background="@drawable/fond">
 
     <ListView
         android:id="@+id/listview"
@@ -16,11 +16,13 @@
         android:dividerHeight="10.0sp"
         android:scrollbars="vertical"
         android:clipToPadding="false"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/list_item" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
