@@ -9,16 +9,17 @@
     <ImageView
         android:id="@+id/imgPage"
         android:layout_width="match_parent"
-        android:layout_height="400dp" />
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/imgPage"
-        android:layout_margin="5dp"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="10dp"
-        android:backgroundTint="#CF6EFF">
+        app:cardCornerRadius="15dp"
+        app:cardElevation="30dp"
+        android:backgroundTint="#CF6EFF"
+        android:layout_centerHorizontal="true">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

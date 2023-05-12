@@ -6,32 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".DetailedActivity"
     android:id="@+id/rel">
-
-    <TextView
-        android:id="@+id/detailName"
-        android:layout_width="wrap_content"
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="Story title"
-        android:textColor="#61295B"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        app:cardBackgroundColor="#CD98E1"
+        android:id="@+id/card"
+    >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/detailName"
-        android:background="#61295B" />
+            <TextView
+                android:id="@+id/detailName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Story title"
+                android:layout_centerHorizontal="true"
+                android:textColor="#61295B"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
 
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/detailName"
+        android:layout_below="@+id/card"
         android:id="@+id/pager">
     </androidx.viewpager.widget.ViewPager>
 
