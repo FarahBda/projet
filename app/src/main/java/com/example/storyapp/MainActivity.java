@@ -25,8 +25,13 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     ListAdapter listAdapter;
-    ArrayList<ListData> dataArrayList = new ArrayList<>();
+    static ArrayList<ListData> dataArrayList = new ArrayList<>();
     ListData listData;
+
+    public static ArrayList<ListData> getDataArrayList() {
+        return dataArrayList;
+    }
+
     boolean[] favorites;
     FloatingActionButton floating;
     @Override
@@ -36,36 +41,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
 
-        int[] imageList = {R.drawable.alice,R.drawable.cendrillon, R.drawable.hanselgretel, R.drawable.lespetitscochons, R.drawable.peterpan, R.drawable.petitpoucet, R.drawable.pinocchio};
-        String[] titleList = {"Alice", "Cendrillon", "Hansel et Gretel", "Les trois petits cochons", "Peter Pan","Petit poucet","Pinocchio"};
-        String[] pageList = {"3 pages", "2 pages", "4 pages","3 pages", "5 pages", "4 pages", "2 pages"};
+//        int[] imageList = {R.drawable.cendrillon, R.drawable.hanselgretel, R.drawable.lespetitscochons, R.drawable.peterpan, R.drawable.petitpoucet, R.drawable.pinocchio};
+//        String[] titleList = {"Cendrillon", "Hansel et Gretel", "Les trois petits cochons", "Peter Pan","Petit poucet","Pinocchio"};
+//        String[] pageList = { "2 pages", "4 pages","3 pages", "5 pages", "4 pages", "2 pages"};
+//
+//        favorites = new boolean[imageList.length];
 
-        favorites = new boolean[imageList.length];
+//        for (int i = 0; i < imageList.length; i++){
+//            listData = new ListData(titleList[i], pageList[i], imageList[i]);
+//            dataArrayList.add(listData);
+//        }
 
-        for (int i = 0; i < imageList.length; i++){
-            listData = new ListData(titleList[i], pageList[i], imageList[i]);
-            dataArrayList.add(listData);
-        }
-
-
+        dataArrayList=DataFill.fillData();
         listAdapter = new ListAdapter(MainActivity.this, dataArrayList);
         binding.listview.setAdapter(listAdapter);
-
-//        binding.listview
-//                .setClickable(true);
-//
-//
-//        binding.listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                Toast.makeText(MainActivity.this, "Test", Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(MainActivity.this, DetailedActivity.class);
-//                intent.putExtra("name", titleList[i]);
-//                intent.putExtra("time", pageList[i]);
-//                intent.putExtra("image", imageList[i]);
-//                startActivity(intent);
-//            }
-//        });
         binding.listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -84,4 +73,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }

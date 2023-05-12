@@ -10,9 +10,11 @@
         android:id="@+id/img"
         android:layout_width="match_parent"
         android:layout_height="900dp"
-        app:srcCompat="@drawable/wlc"
-        tools:layout_editor_absoluteX="-295dp"
-        tools:layout_editor_absoluteY="-74dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wlc" />
 
     <ImageView
         android:id="@+id/logo"

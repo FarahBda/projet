@@ -1,22 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".DetailedActivity">
+    tools:context=".DetailedActivity"
+    android:id="@+id/rel">
 
     <TextView
+        android:id="@+id/detailName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/detailName"
-        android:layout_marginTop="14dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:text="Story title"
-        android:textSize="24sp"
         android:textColor="#61295B"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/detailName"
+        android:background="#61295B" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/detailName"
+        android:id="@+id/pager">
+    </androidx.viewpager.widget.ViewPager>
 
 
-</LinearLayout>
+</RelativeLayout>
