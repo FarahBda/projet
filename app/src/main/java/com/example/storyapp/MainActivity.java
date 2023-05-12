@@ -6,11 +6,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.storyapp.databinding.ActivityMainBinding;
@@ -24,15 +28,13 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<ListData> dataArrayList = new ArrayList<>();
     ListData listData;
     boolean[] favorites;
-
-    ImageButton imageButton;
-
     FloatingActionButton floating;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
 
         int[] imageList = {R.drawable.alice,R.drawable.cendrillon, R.drawable.hanselgretel, R.drawable.lespetitscochons, R.drawable.peterpan, R.drawable.petitpoucet, R.drawable.pinocchio};
         String[] titleList = {"Alice", "Cendrillon", "Hansel et Gretel", "Les trois petits cochons", "Peter Pan","Petit poucet","Pinocchio"};
