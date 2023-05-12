@@ -6,18 +6,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
 
 public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
-    ArrayList<ListData> dataArrayList = new ArrayList<>();
+    ListData dataArrayList;
     Context context;
     LayoutInflater layoutInflater;
 
 
-    public PagerAdapter(ArrayList<ListData> dataArrayList, Context context) {
+    public PagerAdapter(ListData dataArrayList, Context context) {
         this.dataArrayList = dataArrayList;
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
@@ -25,7 +26,7 @@ public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
 
     @Override
     public int getCount() {
-        return dataArrayList.size();
+        return dataArrayList.getStories().size();
     }
 
     @Override
@@ -39,8 +40,9 @@ public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
         View view=layoutInflater.inflate(R.layout.pager_item,container,false);
 
         ImageView img = view.findViewById(R.id.imgPage);
-        img.setImageResource(dataArrayList.get(position).getStories().get(position).imagePage);
-
+        img.setImageResource(dataArrayList.getStories().get(position).imagePage);
+        TextView txt = view.findViewById(R.id.detailName);
+        txt.setText(dataArrayList.getStories().get(position).textPage);
         container.addView(view);
         return view;
     }

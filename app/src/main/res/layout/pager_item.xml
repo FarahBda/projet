@@ -2,15 +2,28 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/relPager">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relPager"
+    android:background="@drawable/fonnd">
 
     <ImageView
         android:id="@+id/imgPage"
         android:layout_width="match_parent"
         android:layout_height="400dp" />
 
-    <TextView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/imgPage"/>
+        android:layout_below="@id/imgPage"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp"
+        android:backgroundTint="#CF6EFF">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/detailName"
+            android:textSize="22sp"
+            android:text="This is the story of Rachid the great.He was the best programmer of his university, yet he didn't have any motivation."/>
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>

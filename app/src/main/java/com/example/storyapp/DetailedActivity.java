@@ -26,24 +26,25 @@ public class DetailedActivity extends AppCompatActivity {
         binding = ActivityDetailedBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        dataArrayList = MainActivity.getDataArrayList();
-
-        for (int i = 0; i < dataArrayList.size(); i++) {
-            if (dataArrayList.get(i).getTitle().equals(binding.detailName))
-            {
-
-            }
-        }
-
-        viewPager = (ViewPager) findViewById(R.id.pager);
-
-        PagerAdapter adapter = new PagerAdapter(dataArrayList, DetailedActivity.this);
-        viewPager.setAdapter(adapter);
-
         Intent intent = this.getIntent();
         if (intent != null){
             String name = intent.getStringExtra("name");
             binding.detailName.setText(name);
         }
+        dataArrayList = MainActivity.getDataArrayList();
+
+        for (int i = 0; i < dataArrayList.size(); i++) {
+            if (dataArrayList.get(i).getTitle().equals(intent.getStringExtra("name"))) {
+                data = dataArrayList.get(i);
+                break;
+            }
+        }
+
+        viewPager = (ViewPager) findViewById(R.id.pager);
+
+        PagerAdapter adapter = new PagerAdapter(data, DetailedActivity.this);
+        viewPager.setAdapter(adapter);
+
+
     }
 }

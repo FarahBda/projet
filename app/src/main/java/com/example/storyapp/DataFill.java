@@ -13,9 +13,9 @@ public class DataFill {
     {
         ArrayList<Pages> pagesArrayList = new ArrayList<>();
         pagesArrayList.add(new Pages(R.drawable.picture_1,"1ère page"));
-        pagesArrayList.add(new Pages(R.drawable.picture_1,"2ème page"));
-        pagesArrayList.add(new Pages(R.drawable.picture_1,"3ème page"));
-        pagesArrayList.add(new Pages(R.drawable.picture_1,"4ème page"));
+        pagesArrayList.add(new Pages(R.drawable.picture_2,"2ème page"));
+        pagesArrayList.add(new Pages(R.drawable.picture_3,"3ème page"));
+        pagesArrayList.add(new Pages(R.drawable.picture_4,"4ème page"));
 
         dataArrayList.add(new ListData("Alice","3 pages",R.drawable.alice,false,pagesArrayList));
         dataArrayList.add(new ListData("Cendrillon","2 pages",R.drawable.cendrillon,false,pagesArrayList));
