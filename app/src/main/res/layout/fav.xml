@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".FavActivity">
+    tools:context=".FavActivity"
+    android:background="@drawable/fonnd">
     <ListView
         android:id="@+id/favList"
         android:layout_width="match_parent"

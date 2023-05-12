@@ -52,6 +52,12 @@ public class DataFill {
         pagesArrayList7.add(new Pages(R.drawable.picture_3,"3ème page"));
         pagesArrayList7.add(new Pages(R.drawable.picture_4,"4ème page"));
 
+        ArrayList<Pages> pagesArrayList8 = new ArrayList<>();
+        pagesArrayList8.add(new Pages(R.drawable.picture_1,"1ère page"));
+        pagesArrayList8.add(new Pages(R.drawable.picture_2,"2ème page"));
+        pagesArrayList8.add(new Pages(R.drawable.picture_3,"3ème page"));
+        pagesArrayList8.add(new Pages(R.drawable.picture_4,"4ème page"));
+
         dataArrayList.add(new ListData("Alice","3 pages",R.drawable.alice,false,pagesArrayList1));
         dataArrayList.add(new ListData("Cendrillon","2 pages",R.drawable.cendrillon,false,pagesArrayList2));
         dataArrayList.add(new ListData("Hansel et Gretel","3 pages",R.drawable.hanselgretel,false,pagesArrayList3));
@@ -59,7 +65,7 @@ public class DataFill {
         dataArrayList.add(new ListData("Peter Pan","4 pages",R.drawable.peterpan,false,pagesArrayList5));
         dataArrayList.add(new ListData("Petit poucet","2 pages",R.drawable.petitpoucet,false,pagesArrayList6));
         dataArrayList.add(new ListData("Pinocchio","4 pages",R.drawable.pinocchio,false,pagesArrayList7));
-
+        dataArrayList.add(new ListData("Le Petit Prince","4 pages",R.drawable.petit_prince,false,pagesArrayList7));
         return dataArrayList;
     }
 }
