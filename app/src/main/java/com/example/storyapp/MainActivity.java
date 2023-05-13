@@ -67,14 +67,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        floating= (FloatingActionButton) findViewById(R.id.floating);
-        floating.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,FavActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
