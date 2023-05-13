@@ -11,7 +11,7 @@ public class DataFill {
 
     public static ArrayList<ListData> fillData()
     {   ArrayList<Pages> pagesArrayList1 = new ArrayList<>();
-        pagesArrayList1.add(new Pages(R.drawable.a,"1ère page"));
+        pagesArrayList1.add(new Pages(R.drawable.a,"1ére page"));
         pagesArrayList1.add(new Pages(R.drawable.b,"2ème page"));
         pagesArrayList1.add(new Pages(R.drawable.c,"3ème page"));
         pagesArrayList1.add(new Pages(R.drawable.d,"4ème page"));
@@ -60,7 +60,7 @@ public class DataFill {
         pagesArrayList8.add(new Pages(R.drawable.picture_3,"3ème page"));
         pagesArrayList8.add(new Pages(R.drawable.picture_4,"4ème page"));
 
-        dataArrayList.add(new ListData("Alice","6 pages",R.drawable.alice,false,pagesArrayList1));
+        dataArrayList.add(new ListData("Blanche Neige","6 pages",R.drawable.a,false,pagesArrayList1));
         dataArrayList.add(new ListData("Cendrillon","2 pages",R.drawable.cendrillon,false,pagesArrayList2));
         dataArrayList.add(new ListData("Hansel et Gretel","3 pages",R.drawable.hanselgretel,false,pagesArrayList3));
         dataArrayList.add(new ListData("Les trois petits cochons","5 pages",R.drawable.lespetitscochons,false,pagesArrayList4));
