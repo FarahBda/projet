@@ -9,22 +9,7 @@
     <ImageView
         android:id="@+id/imgPage"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_height="match_parent" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/imgPage"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="30dp"
-        android:backgroundTint="#CF6EFF"
-        android:layout_centerHorizontal="true">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/detailName"
-            android:textSize="22sp"
-            android:text="This is the story of Rachid the great.He was the best programmer of his university, yet he didn't have any motivation."/>
-    </androidx.cardview.widget.CardView>
+
 </RelativeLayout>
