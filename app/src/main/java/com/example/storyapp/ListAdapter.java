@@ -10,11 +10,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 
 public class ListAdapter extends ArrayAdapter<ListData> {
     public static ArrayList<ListData> favorites = new ArrayList<>();
@@ -45,6 +48,16 @@ public class ListAdapter extends ArrayAdapter<ListData> {
         listPage.setText(listData.page);
 
         ImageButton imageButton = view.findViewById(R.id.nextButton);
+
+        CardView card =view.findViewById(R.id.cardItem);
+        card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),DetailedActivity.class);
+                intent.putExtra("name",listData.title);
+                getContext().startActivity(intent);
+            }
+        });
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
