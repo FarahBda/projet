@@ -3,13 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/relPager"
-    android:background="@drawable/fonnd">
+    android:background="@drawable/font"
+    android:id="@+id/relPager">
 
     <ImageView
         android:id="@+id/imgPage"
+        android:layout_width="269dp"
+        android:layout_height="396dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="70dp" />
+
+    <TextView
+        android:id="@+id/detailName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="203dp"
+        android:layout_below="@+id/imgPage"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="0dp"
+        android:text="TextView"
+        android:textSize="20dp" />
 
 
 </RelativeLayout>

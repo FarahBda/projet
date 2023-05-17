@@ -45,8 +45,8 @@ public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
         ImageView img = view.findViewById(R.id.imgPage);
         img.setImageResource(dataArrayList.getStories().get(position).imagePage);
 
-//        TextView txt = view.findViewById(R.id.detailName);
-//        txt.setText(dataArrayList.getStories().get(position).textPage);
+        TextView txt = view.findViewById(R.id.detailName);
+        txt.setText(dataArrayList.getStories().get(position).textPage);
         container.addView(view);
 
 
