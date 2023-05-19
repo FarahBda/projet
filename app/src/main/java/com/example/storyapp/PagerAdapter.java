@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 
 public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
-    MediaPlayer mediaPlayer;
     ListData dataArrayList;
     Context context;
     LayoutInflater layoutInflater;
@@ -24,7 +23,6 @@ public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
         this.dataArrayList = dataArrayList;
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
-        mediaPlayer = MediaPlayer.create(context, R.raw.sound2);
     }
 
     @Override
@@ -48,10 +46,6 @@ public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
         TextView txt = view.findViewById(R.id.detailName);
         txt.setText(dataArrayList.getStories().get(position).textPage);
         container.addView(view);
-
-
-
-            mediaPlayer.start();
 
 
         return view;

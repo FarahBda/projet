@@ -43,18 +43,6 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
-//        int[] imageList = {R.drawable.cendrillon, R.drawable.hanselgretel, R.drawable.lespetitscochons, R.drawable.peterpan, R.drawable.petitpoucet, R.drawable.pinocchio};
-//        String[] titleList = {"Cendrillon", "Hansel et Gretel", "Les trois petits cochons", "Peter Pan","Petit poucet","Pinocchio"};
-//        String[] pageList = { "2 pages", "4 pages","3 pages", "5 pages", "4 pages", "2 pages"};
-//
-//        favorites = new boolean[imageList.length];
-
-//        for (int i = 0; i < imageList.length; i++){
-//            listData = new ListData(titleList[i], pageList[i], imageList[i]);
-//            dataArrayList.add(listData);
-//        }
-
         dataArrayList=DataFill.fillData();
         listAdapter = new ListAdapter(MainActivity.this, dataArrayList);
         binding.listview.setAdapter(listAdapter);
