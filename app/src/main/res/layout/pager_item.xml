@@ -1,33 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:layout_width="409dp"
+    android:layout_height="729dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/relPager"
-    android:background="@drawable/font">
+    android:background="@drawable/fond_1">
 
     <ImageView
         android:id="@+id/imgPage"
-        android:layout_width="261dp"
-        android:layout_height="374dp"
+        android:layout_width="309dp"
+        android:layout_height="453dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="70dp" />
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp" />
 
     <TextView
         android:id="@+id/detailName"
-        android:layout_width="347dp"
-        android:layout_height="203dp"
-        android:typeface="serif"
-        android:background="@color/white"
-        android:textColor="@color/black"
+        android:layout_width="311dp"
+        android:layout_height="508dp"
         android:layout_below="@+id/imgPage"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="48dp"
+        android:background="@color/white"
         android:text="TextView"
-        android:textSize="20dp" />
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:typeface="serif" />
 
 
 </RelativeLayout>
+    </ScrollView>
