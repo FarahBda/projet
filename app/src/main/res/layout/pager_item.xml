@@ -1,42 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    android:layout_width="409dp"
-    android:layout_height="729dp"
+<RelativeLayout
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/relPager"
-    android:background="@drawable/fond_1">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imgPage"
-        android:layout_width="309dp"
-        android:layout_height="453dp"
-        android:layout_alignParentStart="true"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Your existing layout content -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relPager"
+            android:background="@drawable/fond_1">
+
+            <ImageView
+                android:id="@+id/imgPage"
+                android:layout_width="309dp"
+                android:layout_height="453dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp" />
+
+            <TextView
+                android:id="@+id/detailName"
+                android:layout_width="311dp"
+                android:layout_height="508dp"
+                android:layout_below="@+id/imgPage"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="48dp"
+                android:background="@color/white"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:typeface="serif" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp" />
-
-    <TextView
-        android:id="@+id/detailName"
-        android:layout_width="311dp"
-        android:layout_height="508dp"
-        android:layout_below="@+id/imgPage"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="48dp"
-        android:background="@color/white"
-        android:text="TextView"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:typeface="serif" />
-
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/sound_on"
+        android:backgroundTint="@color/purple_200"
+        android:id="@+id/TTSButton"/>
 
 </RelativeLayout>
-    </ScrollView>
