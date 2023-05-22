@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.storyapp.databinding.FavBinding;
 
 public class FavActivity extends AppCompatActivity {
-   FavBinding binding;
+    FavBinding binding;
 
     ListAdapter listAdapter;
 

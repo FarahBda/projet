@@ -28,11 +28,10 @@ public class DataFill {
         pagesArrayList2.add(new Pages(R.drawable.aa,"La princesse Violette est impatiente, car ce soir a lieu le bal masqué et elle a enfin l'âge de s'y rendre. Son père le roi Hubert et sa mère la reine Velda organisent chaque année un bal masqué en l'honneur de tous les amis du royaume."));
         pagesArrayList2.add(new Pages(R.drawable.bb,"Violette a toujours rêvé d'y aller et de pouvoir s'amuser avec ses amis. Elle enfile une magnifique robe rouge à volants, se pose sur le visage un masque de la même couleur, puis elle descend au salon où se passent les festivités. Elle y retrouve Ronan, Zena et Chloé, ses amis de toujours. \"Comme tu es belle Violette dans cette robe !\" complimente Ronan. \"Oh, oui et ton masque comme il brille ! \" lance Zena."));
         pagesArrayList2.add(new Pages(R.drawable.cc,"Les quatre amis dansent ensemble, ils s'amusent beaucoup. Ils essayent de deviner qui se cache derrière les masques tout en dégustant des hors-d'oeuvres."));
-        pagesArrayList2.add(new Pages(R.drawable.dd,"Les quatre amis dansent ensemble, ils s'amusent beaucoup. Ils essayent de deviner qui se cache derrière les masques tout en dégustant des hors-d'oeuvres.\n" +
-                "\n" +
+        pagesArrayList2.add(new Pages(R.drawable.dd,
                 "Violette aperçoit Gaspard qui vient de passer la porte du salon, elle l'a invité à participer à cette soirée."));
         pagesArrayList2.add(new Pages(R.drawable.ee,"Le garçon porte un élégant costume qui a été confectionné par la couturière du château. C'est la maman de Violette qui le lui a offert pour son anniversaire."));
-        pagesArrayList2.add(new Pages(R.drawable.ff,"Le garçon porte un élégant costume qui a été confectionné par la couturière du château. C'est la maman de Violette qui le lui a offert pour son anniversaire.\n" +
+        pagesArrayList2.add(new Pages(R.drawable.ff,
                 "\n" +
                 "\"Bonsoir Gaspard, tiens, je t'ai gardé un masque\" \"Merci Princesse, tu es vraiment très jolie, ta robe te va très bien ! \" dit-il en enfilant son masque. Violette rougit et attrape Gaspard par le bras pour aller danser."));
         pagesArrayList2.add(new Pages(R.drawable.gg,"\"Bonsoir Gaspard, tiens, je t'ai gardé un masque\" \"Merci Princesse, tu es vraiment très jolie, ta robe te va très bien ! \" dit-il en enfilant son masque. Violette rougit et attrape Gaspard par le bras pour aller danser.\n" +

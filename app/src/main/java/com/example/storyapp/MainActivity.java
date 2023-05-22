@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             case R.id.menu_about:
+                Intent intent2 = new Intent(MainActivity.this,AboutActivity.class);
+                startActivity(intent2);
             default:
                 return super.onOptionsItemSelected(item);
         }

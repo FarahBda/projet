@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AboutActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/topText"
+        android:text="Ce projet a été fait par:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/topText"
+        android:layout_alignStart="@+id/topText"
+        android:layout_alignEnd="@+id/topText"
+        android:layout_centerVertical="true"
+        android:backgroundTint="#D569A5EF"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:id="@+id/firstCard">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="MOUCI\nMohamed\nRachid"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_alignStart="@+id/name"
+                android:layout_alignEnd="@+id/name"
+                android:text="GROUPE 1"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/secondCard"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/firstCard"
+        android:layout_alignStart="@+id/firstCard"
+        android:layout_alignEnd="@+id/firstCard"
+        android:backgroundTint="#D569A5EF"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="BOUDOUA\nFarah"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name2"
+                android:layout_alignStart="@+id/name2"
+                android:layout_alignEnd="@+id/name2"
+                android:text="GROUPE 1"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secondCard"
+        android:layout_alignStart="@+id/secondCard"
+        android:layout_alignEnd="@+id/secondCard"
+        android:layout_marginTop="10dp"
+        android:text="Github"
+        app:icon="@drawable/github_white"
+        android:id="@+id/githubBtn"
+        android:backgroundTint="@color/purple_200">
+
+    </com.google.android.material.button.MaterialButton>
+</RelativeLayout>
