@@ -153,7 +153,7 @@ public class DataFill {
         dataArrayList.add(new ListData("Les trois petits cochons",pagesArrayList5.size()+" pages",R.drawable.petits_cochons_2,false,pagesArrayList5));
         dataArrayList.add(new ListData("Le Petit poucet",pagesArrayList6.size()+" pages",R.drawable.petit_poucet_10,false,pagesArrayList6));
         dataArrayList.add(new ListData("Le petit lapin de pâques",pagesArrayList7.size()+" pages",R.drawable.lapin_1,false,pagesArrayList7));
-        dataArrayList.add(new ListData("Boucles d'or et les trois ours",pagesArrayList8.size()+" pages",R.drawable.boucles_1,false,pagesArrayList7));
+        dataArrayList.add(new ListData("Boucles d'or et les trois ours",pagesArrayList8.size()+" pages",R.drawable.boucles_1,false,pagesArrayList8));
         return dataArrayList;
     }
 }
