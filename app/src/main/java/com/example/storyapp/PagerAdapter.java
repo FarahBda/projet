@@ -26,6 +26,8 @@ public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
 
     TextToSpeech tts;
 
+    boolean isSpeaking = false;
+
     public PagerAdapter(ListData dataArrayList, Context context) {
         this.dataArrayList = dataArrayList;
         this.context = context;
@@ -70,7 +72,12 @@ public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
         tts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                speakText(dataArrayList.getStories().get(position).textPage);
+                if (!isSpeaking) {
+                    isSpeaking = true;
+                    speakText(dataArrayList.getStories().get(position).textPage);
+                }
+                else {stopTTS();
+                isSpeaking=false;}
             }
         });
 
@@ -84,15 +91,14 @@ public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
     }
 
     private void speakText(String text) {
-        if (!TextUtils.isEmpty(text)) {
+        if (tts != null) {
             tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
         }
     }
+
     public void stopTTS() {
         if (tts != null) {
             tts.stop();
-            tts.shutdown();
-            tts = null;
         }
     }
 }
